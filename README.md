@@ -1,5 +1,5 @@
+![Screenshot](https://user-images.githubusercontent.com/73199603/152814175-12e08253-6e71-4ce1-aacb-daadaf576912.png)
 
-![Screenshot](https://user-images.githubusercontent.com/73199603/152813990-09f90b49-8169-454e-a569-32f7085f28cb.png)
 
 This is a basic messenger web chat application. Where you can send private messages to online users. For this
 application is used sockets for sending messages, express for backend server with mongodb for saving data and on the
