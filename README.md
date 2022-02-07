@@ -1,3 +1,4 @@
+# 💭Messenger
 This is a basic messenger web chat application. Where you can send private messages to online users. For this
 application is used sockets for sending messages, express for backend server with mongodb for saving data and on the
 frontend I used React with Next.js for search engine optimization.
