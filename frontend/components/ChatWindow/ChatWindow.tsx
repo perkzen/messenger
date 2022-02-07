@@ -17,6 +17,7 @@ import { getDateNow, getTimeNow } from '../../utils/dateFomatter';
 import Spinner from '../Spinner/Spinner';
 import DownButton from '../DownButton/DownButton';
 import { useInView } from 'react-intersection-observer';
+import { appendMessage } from '../../store/features/chatSlice';
 
 const ChatWindow = () => {
   const { user } = useAppSelector((state) => state.auth);
@@ -72,11 +73,16 @@ const ChatWindow = () => {
   }, [receiver, conversationId]);
 
   useEffect(() => {
-    socket?.on(SocketEvents.RECEIVE_MESSAGE, () => {
-      // could optimize
-      dispatch(fetchMessages(conversationId));
+    socket?.on(SocketEvents.RECEIVE_MESSAGE, (data: MessageType) => {
+      dispatch(
+        appendMessage({
+          ...data,
+          time: getTimeNow(),
+          date: getDateNow(),
+        })
+      );
     });
-  }, [messages]);
+  }, []);
 
   useEffect(() => {
     if (receiver) scrollToLastMessage();

@@ -26,6 +26,9 @@ export const chatSlice = createSlice({
     pickReceiver: (state, action: PayloadAction<User>) => {
       state.receiver = action.payload;
     },
+    appendMessage: (state, action) => {
+      state.messages = [...state.messages, action.payload];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -41,6 +44,6 @@ export const chatSlice = createSlice({
   },
 });
 
-export const { pickReceiver } = chatSlice.actions;
+export const { pickReceiver, appendMessage } = chatSlice.actions;
 
 export default chatSlice.reducer;
