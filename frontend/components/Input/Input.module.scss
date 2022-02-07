@@ -1,0 +1,17 @@
+.Input {
+
+  input {
+    @apply w-full rounded pl-4 h-10 shadow-sm;
+    background: #C0D7E9;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+
+  ::placeholder {
+    color: #7A909F;
+  }
+
+}

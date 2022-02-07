@@ -1,0 +1,47 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  @apply pt-5 pb-10;
+
+
+  input:focus {
+    outline: none;
+  }
+
+  button {
+    @apply shadow-xl;
+    @apply px-4 py-2 font-semibold  shadow rounded text-white bg-primary;
+  }
+}
+
+.Picker {
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+}
+
+.TextInput {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  background-color: #F1F2F4;
+  @apply shadow rounded-full px-4;
+
+  input {
+    width: 95%;
+    background-color: #F1F2F4;
+    @apply mr-2;
+  }
+
+  svg {
+    @apply text-primary;
+    font-size: 1.2rem;
+    cursor: pointer;
+    @apply transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110 hover:text-blue-600 cursor-pointer duration-300;
+  }
+}

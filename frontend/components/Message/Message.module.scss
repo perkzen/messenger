@@ -1,0 +1,77 @@
+.Container {
+  padding: 0 5%;
+  margin-top: 3px;
+  position: relative;
+  @apply my-2;
+
+
+  .messageText {
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    font-size: 1.1em;
+    word-wrap: break-word;
+  }
+
+  .messageBox {
+    border-radius: 20px;
+    padding: 5px 20px;
+    display: inline-block;
+    max-width: 50%;
+  }
+
+
+  .sentText {
+    display: flex;
+    align-items: center;
+    color: #828282;
+    letter-spacing: 0.3px;
+  }
+
+  small {
+    position: absolute;
+    @apply pt-2;
+  }
+
+
+}
+
+
+.justifyStart {
+  display: flex;
+  justify-content: flex-start;
+
+  small {
+    top: 85%;
+    left: 6%;
+  }
+
+}
+
+.justifyEnd {
+  display: flex;
+  justify-content: flex-end;
+
+  small {
+    top: 85%;
+    right: 6%;
+  }
+}
+
+.SentByMe {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  background: #2979FF;
+}
+
+.NotSentByMe {
+  display: flex;
+  justify-content: flex-start;
+  color: #353535;
+  background-color: #dadada;
+}
+
+
+
+

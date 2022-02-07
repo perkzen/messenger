@@ -1,0 +1,79 @@
+.Container {
+
+  min-height: 100vh;
+  background-color: #CCE3F5;
+
+.SideBarContent {
+
+  height: 90vh;
+}
+
+  .Header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    h2 {
+      @apply font-bold;
+      font-size: 2rem;
+    }
+
+  }
+
+  .OnlineUsers {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    overflow-y: auto;
+    @apply pt-5;
+  }
+
+  section {
+    @apply  p-5;
+    .Info {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+
+  .SearchBar {
+  @apply px-5;
+  }
+
+
+  .Logout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    button {
+      @apply w-full mx-5;
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #C0D7E9;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 5px #bbcede;
+    @apply rounded-full;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+
+    @apply rounded-full;
+  }
+}
+
+
+

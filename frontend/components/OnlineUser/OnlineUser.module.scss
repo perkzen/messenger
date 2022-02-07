@@ -1,0 +1,16 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  h2 {
+    align-self: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  @apply transition ease-out duration-700 hover:bg-[#C0D7E9] cursor-pointer;
+  @apply p-5;
+
+}
+

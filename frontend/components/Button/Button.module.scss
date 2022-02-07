@@ -1,0 +1,24 @@
+.Button {
+  @apply  shadow-xl;
+  @apply  px-4 py-2 font-semibold  shadow rounded text-white bg-primary opacity-75;
+  @apply disabled:cursor-not-allowed;
+  font-weight: 400;
+
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    @apply ml-4;
+  }
+}
+
+.NotDisabled {
+  @apply opacity-100 hover:bg-blue-600;
+}
+
+.Animation {
+  @apply transition ease-in-out delay-75  hover:-translate-y-1 hover:scale-110 hover:bg-blue-600 cursor-pointer duration-300;
+}

@@ -1,0 +1,15 @@
+.Status {
+  @apply relative inline-flex;
+
+  .PingContainer {
+    @apply flex absolute h-3 w-3 bottom-1 right-1 -mt-1 -mr-1 -ml-1;
+  }
+
+  .PingPulse {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-200 opacity-50;
+  }
+
+  .Ping {
+    @apply relative inline-flex rounded-full h-3 w-3 bg-green-400;
+  }
+}

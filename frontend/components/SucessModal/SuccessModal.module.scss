@@ -1,0 +1,17 @@
+.Modal {
+  @apply relative my-6 mx-auto max-w-3xl z-10;
+  width: fit-content;
+}
+
+.Content {
+  @apply bg-neutral-100 border-0 rounded-lg shadow-lg relative flex flex-col w-full  outline-none focus:outline-none;
+
+}
+
+
+.Body {
+  @apply relative py-2 px-6 flex-auto;
+  @apply text-green-500;
+}
+
+
