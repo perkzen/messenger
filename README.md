@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a basic messenger web chat application. Where you can send private messages to online users. For this
+application is used sockets for sending messages, express for backend server with mongodb for saving data and on the
+frontend I used React with Next.js for search engine optimization.
 
 ## Getting Started
 
-First, run the development server:
+First you need to install all necessary packages on the frontend and backend:
 
 ```bash
-npm run dev
-# or
-yarn dev
+cd frontend
+npm i
+
+cd backend
+npm i
+```
+After that create a  `.env` file in the backend folder, it should look something like this.
+
+```dotenv
+DATABASE_URL=mongodb+srv://<username>:<password>@cluster0.oop39.mongodb.net/<collection-name>?retryWrites=true&w=majority
+PORT=5000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/server.tsx`. The page auto-updates as you edit the file.
+ To start the application you need to run the frontend and backend server with the following commands.
+```bash
+cd frontend
+npm dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/avatar.ts`.
+cd backbend
+npm dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If everything works correctly you should get these two outputs in your terminal windows.
 
-## Learn More
+For frontend:
+```bash
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+event - compiled client and server successfully in 553 ms (307 modules)
+```
 
-To learn more about Next.js, take a look at the following resources:
+For backend:
+```bash
+Server is running on port 5000
+MongoDB database connection established successfully
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project details
+NodeJS version: 14.18.1
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Express version: 4.17.2
 
-## Deploy on Vercel
+ReactJS version: 17.0.2
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Typescript version: 4.5.5
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next version: 12.0.8
+
+### Important frontend packages
+- next
+- redux
+- redux-saga
+- redux-toolkit
+- typescript
+- react-hook-form
+- classnames
+- uuid
+- sass
+- react-icons
+- axios
+- socket.io-client
+- emoji-picker-react
+- @dicebear/avatars-identicon-sprites
+- react-intersection-observer
+
+### Important backend packages
+- bcrypt
+- cors
+- express
+- mongoose
+- socket.io
