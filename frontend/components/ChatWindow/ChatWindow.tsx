@@ -24,7 +24,6 @@ const ChatWindow = () => {
     (state) => state.chat
   );
   const { loading } = useAppSelector((state) => state.global);
-
   const messagesRef = useRef<HTMLDivElement>();
   const socket = useContext(SocketContext);
   const dispatch = useAppDispatch();
@@ -73,8 +72,8 @@ const ChatWindow = () => {
   }, [receiver, conversationId]);
 
   useEffect(() => {
-    socket?.on(SocketEvents.RECEIVE_MESSAGE, (data: MessageType) => {
-      //TODO maybe optimize **
+    socket?.on(SocketEvents.RECEIVE_MESSAGE, () => {
+      // could optimize
       dispatch(fetchMessages(conversationId));
     });
   }, [messages]);
@@ -106,7 +105,7 @@ const ChatWindow = () => {
                     />
                   ))}
                 </div>
-                {!inView && (
+                {!inView && messages.length > 0 && (
                   <div
                     className={classes.DownButton}
                     onClick={() => scrollToLastMessage()}

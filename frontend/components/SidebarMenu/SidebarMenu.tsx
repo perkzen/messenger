@@ -60,6 +60,7 @@ const SidebarMenu = () => {
 
   useEffect(() => {
     return () => {
+      dispatch(pickReceiver());
       dispatch(logout());
       socket.disconnect();
       socket.off();

@@ -30,7 +30,6 @@ app.use(AuthRouter);
 app.use(Routes.CONVERSATION, ConversationRouter);
 app.use(Routes.MESSAGE, MessageRouter);
 
-//TODO store online user in database???
 let onlineUsers: User[] = [];
 
 const addUser = (user: User) => {
