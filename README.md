@@ -1,4 +1,4 @@
-# 💭Messenger
+[💭MESSENGER](https://user-images.githubusercontent.com/73199603/152813580-cab7b328-4101-4f88-b54e-4ec5c79fcc72.png)
 This is a basic messenger web chat application. Where you can send private messages to online users. For this
 application is used sockets for sending messages, express for backend server with mongodb for saving data and on the
 frontend I used React with Next.js for search engine optimization.
